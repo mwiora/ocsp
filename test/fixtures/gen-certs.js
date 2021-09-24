@@ -18,20 +18,15 @@ var ext = rfc5280.AuthorityInfoAccessSyntax.encode([ {
   }
 } ], 'der');
 
-console.debug("BEFORE")
-// var keyUsage = rfc5280.KeyUsage.encode(1, 'der');
+var extensionsCA = rfc5280.KeyUsage.encode({
+  unused: 0,
+  data: 6
+  }, 'der');
 
-
-// const bitArray = new ArrayBuffer(1);
-// const bitView = new Uint8Array(bitArray);
-
-// bitView[0] |= 0x02; // Key usage "cRLSign" flag
-// bitView[0] |= 0x04; // Key usage "keyCertSign" flag
-
-// console.debug("BEFORE")
-// var key = rfc5280.KeyUsage.encode('00000001', 'der');
-// console.log(key)
-console.debug("AFTER")
+var extensionsLEAF = rfc5280.KeyUsage.encode({
+  unused: 0,
+  data: 32+128
+  }, 'der');
 
 var options = {
   serial: 42,
@@ -45,7 +40,7 @@ var options = {
   {
     extnID: [2, 5, 29, 15],
     critical: true,
-    extnValue: 1
+    extnValue: extensionsCA
   }
 ]
 };
@@ -68,7 +63,7 @@ fixtures.getOCSPCert(options, function(cert, key) {
     {
       extnID: [2, 5, 29, 15],
       critical: true,
-      extnValue: 'digitalSignature'
+      extnValue: extensionsLEAF
     }
   ]
   };
