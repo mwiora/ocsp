@@ -21,14 +21,15 @@
   "devDependencies": {
     "jscs": "^2.4.0",
     "jshint": "^2.8.0",
-    "mocha": "^2.2.5",
+    "mocha": "^2.5.3",
     "selfsigned.js": "^3.0.1"
   },
   "dependencies": {
-    "asn1.js": "^4.8.0",
-    "asn1.js-rfc2560": "^4.0.0",
-    "asn1.js-rfc5280": "^2.0.0",
+    "asn1.js": "^5.4.1",
+    "asn1.js-rfc2560": "^5.0.1",
+    "asn1.js-rfc5280": "^3.0.0",
     "async": "^1.5.2",
+    "node-bitstring": "^1.0.1",
     "simple-lru-cache": "0.0.2"
   }
 }
