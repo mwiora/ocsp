@@ -19,8 +19,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "jscs": "^2.4.0",
-    "jshint": "^2.8.0",
+    "jscs": "^3.0.7",
+    "jshint": "^2.13.1",
     "mocha": "^2.5.3",
     "selfsigned.js": "^3.0.1"
   },
