@@ -102,7 +102,7 @@ var server = ocsp.Server.create({
 server.addCert(43, 'good');
 server.addCert(44, 'revoked', {
   revocationTime: new Date(),
-  revocationReason: 'CACompromise'
+  revocationReason: 'cACompromise'
 });
 
 server.listen(8000);
@@ -118,9 +118,9 @@ Has following methods:
   * `status` is one of `good`, `revoked`
   * `info` should be empty for `good` and should contain object for `revoked`
     (see example above, `revocationReason` is one of: `unspecified`,
-     `keyCompromise`, `CACompromise`, `affiliationChanged`, `superseded`,
+     `keyCompromise`, `cACompromise`, `affiliationChanged`, `superseded`,
      `cessationOfOperation`, `certificateHold`, `removeFromCRL`,
-     `privelegeWithdrawn`, `AACompromise`)
+     `privelegeWithdrawn`, `aACompromise`)
 * All of `http.Server` methods!
 
 ## .check()
