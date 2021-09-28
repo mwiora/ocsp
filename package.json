@@ -28,7 +28,7 @@
     "asn1.js": "^5.4.1",
     "asn1.js-rfc2560": "^5.0.1",
     "asn1.js-rfc5280": "^3.0.0",
-    "async": "^1.5.2",
+    "async": "^3.2.0",
     "node-bitstring": "^1.0.1",
     "simple-lru-cache": "0.0.2"
   }
