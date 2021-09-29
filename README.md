@@ -2,6 +2,15 @@
 
 Various [OCSP][0]-related APIs to be used with node.js/io.js.
 
+## Features
+
+- Serving in memory set status for a specific serial number of a certificate
+- Responding to POST Requests (openssl)
+new features in this fork:
+- Responding to GET Requests (nginx)
+- Requesting external REST interfaces for certificate status (pebble)
+- Requesting external MySQL database for certificate status (stepca)
+
 ## Installing
 
 ```bash
